@@ -1,28 +1,32 @@
-import PropTypes from 'prop-types';
 
-const PatientDetail = ({ patient }) => {
-  if (!patient) {
-    return <p>Select a patient to see details</p>;
-  }
+import data from "../assets/Jessica.json";
+import BP from "./BP.jsx"
+
+
+
+const PatientDetail = () => {
+ 
 
   return (
-    <div>
-      <h2 className="text-xl font-bold">{patient.name}</h2>
-      <p>Age: {patient.age}</p>
-      <p>Gender: {patient.gender}</p>
-      <p>Date of Birth: {patient.date_of_birth}</p> {/* Add other fields as necessary */}
+    <div className="bg-white rounded-[16px] h-[78vh] overflow-y-scroll p-4 mx-2 -my-1">
+      <div className="patient-info">
+        <h2 className="text-xl font-bold">{data.name}</h2>
+        <img
+          src={data.profile_picture}
+          alt="Jessica Taylor"
+          className="rounded-full w-20 h-20"
+        />
+        <p>Gender: {data.gender}</p>
+        <p>Age: {data.age}</p>
+        <p>Date of Birth: {data.date_of_birth}</p>
+        <p>Phone: {data.phone_number}</p>
+        <p>Emergency Contact: {data.emergency_contact}</p>
+        <p>Insurance: {data.insurance_type}</p>
+      </div>
+      
+      <BP />
     </div>
   );
-};
-
-PatientDetail.propTypes = {
-  patient: PropTypes.shape({
-    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-    name: PropTypes.string.isRequired,
-    age: PropTypes.number.isRequired,
-    gender: PropTypes.string.isRequired,
-    date_of_birth: PropTypes.number.isRequired, // Optional field
-  }),
 };
 
 export default PatientDetail;

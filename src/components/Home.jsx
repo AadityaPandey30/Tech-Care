@@ -45,10 +45,10 @@ const Home = () => {
   return (
     <div className=''>
     <div className="flex">
-      <div className="w-1/3">
+      <div className="w-1/5">
         <PatientList patients={patients} onSelectPatient={handleSelectPatient} />
       </div>
-      <div className="w-2/3 p-4">
+      <div className="w-3/5 p-4 ml-5">
         <PatientDetail patient={selectedPatient} />
       </div>
     </div>

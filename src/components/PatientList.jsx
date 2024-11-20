@@ -8,7 +8,7 @@ const PatientList = ({ patients, onSelectPatient }) => {
   }
 
   return (
-    <div className='bg-white rounded-[16px] relative w-[60%] mx-5 my-3 p-1'>
+    <div className='bg-white rounded-[16px] relative w-full mx-5 my-3 p-1'>
         <div className='flex justify-between m-4'>
             <h2 className='text-2xl font-bold'>Patients</h2>
             <img src={search} alt='search'/>
