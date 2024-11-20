@@ -13,7 +13,7 @@ const PatientList = ({ patients, onSelectPatient }) => {
             <h2 className='text-2xl font-bold'>Patients</h2>
             <img src={search} alt='search'/>
         </div>
-    <div className='max-h-[68vh] overflow-y-scroll'>
+    <div className='max-h-[122vh] overflow-y-scroll'>
       {patients.map((patient) => (
         <PatientCard
           key={patient.id}

@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import PatientList from './PatientList';
 import PatientDetail from './PatientDetail';
+import PatientDetail1 from './PatientDetail1';
+
 
 const Home = () => {
   const [patients, setPatients] = useState([]);
@@ -48,8 +50,11 @@ const Home = () => {
       <div className="w-1/5">
         <PatientList patients={patients} onSelectPatient={handleSelectPatient} />
       </div>
-      <div className="w-3/5 p-4 ml-5">
+      <div className="w-[55%] p-4 pr-0 ml-5">
         <PatientDetail patient={selectedPatient} />
+      </div>
+      <div className="w-1/4 p-4">
+        <PatientDetail1 patient={selectedPatient} />
       </div>
     </div>
     </div>

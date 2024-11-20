@@ -13,7 +13,6 @@ const Header = () => {
   return (
     <header className="bg-white shadow-sm m-4 rounded-[70px]">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        {/* Logo Section */}
         <div className="flex items-center">
           <img
             src={logo} 
@@ -23,36 +22,34 @@ const Header = () => {
         </div>
 
         {/* Navigation Links */}
-        <nav className="hidden md:flex space-x-8">
-          
-          <span className="flex">
+        <nav className="hidden md:flex space-x-3">
+          <span className="flex hover:bg-[#01F0D0] px-4 py-2 rounded-[41px]">
             <img src={home} alt="home" className="mr-2" />
             <p className="font-semibold">Overview</p>
           </span>
 
-          <span className="flex">
+          <span className="flex hover:bg-[#01F0D0] px-4 py-2 rounded-[41px]">
             <img src={patients} alt="patients" className="mr-2" />
             <p className="font-semibold">Patients</p>
           </span>
 
-          <span className="flex">
+          <span className="flex hover:bg-[#01F0D0] px-4 py-2 rounded-[41px]">
             <img src={schedule} alt="Schedule" className="mr-2" />
             <p className="font-semibold">Schedule</p>
           </span>
 
-          <span className="flex">
+          <span className="flex hover:bg-[#01F0D0] px-4 py-2 rounded-[41px]">
             <img src={message} alt="message" className="mr-2" />
             <p className="font-semibold">Message</p>
           </span>
 
-          <span className="flex">
+          <span className="flex hover:bg-[#01F0D0] px-4 py-2 rounded-[41px]">
             <img src={transaction} alt="transaction" className="mr-2" />
             <p className="font-semibold">Transaction</p>
           </span>
           
         </nav>
 
-        {/* Search Bar */}
         <div className="hidden md:flex items-center px-2 py-1">
           
           <div><img src={doc} alt="doctor" className="mr-3"/></div>
@@ -63,7 +60,6 @@ const Header = () => {
 
         </div>
 
-        {/* Mobile Menu Button */}
         <button className="md:hidden flex items-center text-gray-600">
           ☰
         </button>

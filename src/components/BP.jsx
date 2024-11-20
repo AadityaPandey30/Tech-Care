@@ -8,6 +8,8 @@ import {
   } from "chart.js";
 import data from "../assets/Jessica.json";
 import down from "../assets/down.svg";
+import upp from "../assets/upp.svg";
+import downn from "../assets/downn.svg";
 
 
 // Register Chart.js components
@@ -77,12 +79,42 @@ const BP = () => {
 
   return (
     <div>
-      <div className="chart-container mt-4 h-[30vh] bg-[#F4F0FE] rounded-[12px] p-3">
-        
-        <div className="flex justify-between"><h3 className="text-lg font-semibold">Blood Pressure </h3>
-            <img src={down}/><p>Last 6 months</p>
+        <h2 className="text-2xl font-bold">Diagnosis History</h2>
+      <div className="chart-container mt-4 bg-[#F4F0FE] rounded-[12px] p-3 flex">
+        <div className="w-2/3">
+            <div className="flex justify-between"><h3 className="text-lg font-semibold mb-2">Blood Pressure </h3>
+                <div className="flex"><p className="mr-3 text-gray-800">Last 6 months</p><img src={down} className="size-4 pt-2 mr-6"/></div>
+            </div>
+            <Line data={chartData} options={chartOptions} />
         </div>
-        <Line data={chartData} options={chartOptions} />
+        <div className="w-1/3 ml-5">
+            <div className="flex">
+                <div className="bg-pink-400 rounded-[100px] size-4 mx-2 my-1">
+                    
+                </div>
+                <p className="font-semibold">Systolic</p>
+            </div>
+            <p className="text-2xl font-semibold ml-2 my-2">160</p>
+            <div className="flex">
+                <img src={upp} className="mx-2" />
+                <p>Higher than Average</p>
+            </div>
+
+            <hr className=" my-3" />
+
+            <div className="flex">
+                <div className="bg-purple-500 rounded-[100px] size-4 mx-2 my-1">
+                    
+                </div>
+                <p className="font-semibold">Diastolic</p>
+            </div>
+            <p className="text-2xl font-semibold ml-2 my-2">78</p>
+            <div className="flex">
+                <img src={downn} className="mx-2" />
+                <p>Lower than Average</p>
+            </div>
+
+        </div>
       </div>
     </div>
   )
